@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <title>Main page</title>
+</head>
+<body>
+<header>
+    <ul class="nav">
+        <li><a href="{% url 'app:main_page'%}">Новости</a></li>
+        <li><a href="./api">API</a></li>
+    </ul>
+</header>
+<main>
+    {% for post in posts %}
+    <div class="post">
+        <div class="upvote"><a href="api/posts/{{ post.id }}/upvote">UP</a></div>
+        <div class="title">{{ post.title }}</div>
+        <div class="body"><a href="{{ post.link }}">Ссылка</a></div>
+        <div class="info">
+            <p>{{ post.author_name }}</p>
+            <p>{{ post.creation_date }}</p>
+            <p>{{ post.amount_of_upvotes }}</p>
+        </div>
+        <hr/>
+    </div>
+    {% endfor %}
+</main>
+<footer>
+    <p>Made by <a class="gitlink" href="https://github.com/Neekeech24" target="_blank">Neekeech</a></p>
+</footer>
+</body>
+</html>
