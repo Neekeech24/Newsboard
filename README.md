@@ -128,4 +128,4 @@ Or just click `UP` button on main page (`127.0.0.1:8000/app`)
 
 
 ## Postman collection
-https://www.getpostman.com/collections/4f43a8aecdc962294249
+[![Run in Postman](https://run.pstmn.io/button.svg)](https://app.getpostman.com/run-collection/4f43a8aecdc962294249)
